@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+}
+
+body {
+    background-color: #37465b;
+    background-size: 500%;
+}
+
+/*Menu de navegacion*/
+.menu {
+    display: flex;
+    min-height: 70px;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    background-color: #212B38;
+}
+
+.menu h2 {
+    color: #08c6AB;
+}
+
+.menu a {
+    text-decoration:none;
+    color: white;
+}
+
+.menu a:hover {
+    color: rgb(0, 0, 0);
+}
+
+/* .menu logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu logo img {
+    height: 100px;
+    margin-right: 10px;
+} */
+
+.menu nav a {
+    font-weight: 800;
+    padding-right: 10px;
+}
+
+.menu nav a:hover {
+    color: #08c6AB;
+}
+
+.search{
+    position: relative;
+    width: 240px;
+    height: 15px;
+    border-radius: 5%;
+    padding: 10px;
+    transition-duration: 500ms;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 15px;
+    border: 1px solid white;
+    overflow: hidden;
+    background-image: url(icons/search-black.png);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: 100% 50%;
+}
+.search:hover{
+    border: 1px solid #08c6AB;
+}
+.search:focus{
+    width: 240px;
+    cursor: text;
+    padding-left: 40px;
+    color: black;
+    outline: none;
+    background-color:white;
+    border: 1px solid #08c6AB;
+    background-image: url(icons/search-black.png) no-repeat;
+    background-size: 24px;
+    background-position: 10px 50%;
+}
+
+@media (max-width:700px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        padding: 10px 0px;
+    }
+
+}
+
+/*-------------Carrusel-----------------*/
+h1{
+    font-size: 54px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-family: 'Odibee Sans', cursive;
+    margin-bottom: 0;
+  }
+  
+  #destacados {
+    color: #08c6AB;
+    font-family: 'Odibee Sans', cursive;
+  }
+  
+  .carousel-wrapper {
+    height: 500px;
+    position: relative;
+    width: 1300px;
+    display: block;
+    margin: 50px auto ;
+    border: 2px solid black;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .arrow{
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+  }
+  .arrow:hover{
+    border: solid #08c6AB;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+  }
+  .arrow-prev {
+    left: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+  
+  }
+  .arrow-next {
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  
+  [id^= "item"] {
+    display: none;
+  }
+  .item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url('images/3.jpg');
+    background-size: cover;
+  }
+  .item-2 {
+    background: url('images/anonymos.jpeg');
+    background-size: cover;
+  }
+  .item-3 {
+    background: url('images/Fondo.jpg');
+    background-size: cover;
+  }
+  
+  *:target ~ .item-1{
+    opacity: 0;
+  }
+  #item-1:target ~ .item-1 {
+    opacity: 1;
+  
+  }
+  #item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+  } 
+  /*--------------Pagina------------------*/
